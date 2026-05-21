@@ -1,12 +1,20 @@
 import express from "express";
+import { searchMovies,getFavorites,addFavorites,removeFavorites } from "../controllers/movieController.js";
 
 const router = express.Router();
 
-router.get("/serch",(req,res)=>{
-    res.json({
-        message:"movie serch route is working"
-    })
-})
+router.get("/search", searchMovies);
+
+
+router.get("/favorites", getFavorites);
+
+router.post("/favorites", addFavorites);
+
+router.delete(
+  "/favorites/:id",
+  removeFavorites
+);
+
 
 
 export default router;
