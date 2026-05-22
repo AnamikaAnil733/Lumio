@@ -1,1 +1,50 @@
-[]
+[
+  {
+    "Id": "tt2250912",
+    "Title": "Spider-Man: Homecoming",
+    "Year": "2017",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BODY2MTAzOTQ4M15BMl5BanBnXkFtZTgwNzg5MTE0MjI@._V1_QL75_UX380_CR0,0,380,562_.jpg"
+  },
+  {
+    "Id": "tt0316654",
+    "Title": "Spider-Man 2",
+    "Year": "2004",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BNGQ0YTQyYTgtNWI2YS00NTE2LWJmNDItNTFlMTUwNmFlZTM0XkEyXkFqcGc@._V1_SX300.jpg"
+  },
+  {
+    "Id": "tt4633694",
+    "Title": "Spider-Man: Into the Spider-Verse",
+    "Year": "2018",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BMjMwNDkxMTgzOF5BMl5BanBnXkFtZTgwNTkwNTQ3NjM@._V1_SX300.jpg"
+  },
+  {
+    "Id": "tt32064037",
+    "Title": "To Avenge My Ex, I Married a Stranger",
+    "Year": "2023",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BOTllYzE5NDAtMTNiMC00Y2U2LTg1YWYtMjUwOGJlNGM3YzE0XkEyXkFqcGc@._V1_SX300.jpg"
+  },
+  {
+    "Id": "tt36152613",
+    "Title": "The Bat-Man II",
+    "Year": "2025",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BNTViM2RlY2QtNjhjNC00NTZiLWIzNGMtMzdhZTA3ZWFmNjQ5XkEyXkFqcGc@._V1_SX300.jpg"
+  },
+  {
+    "Id": "tt34788501",
+    "Title": "The Bat-Man",
+    "Year": "2025",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BNzRmOWZkZGQtOTY0OS00YmFmLTgwYjctOWZhZjIxNjYyYjZjXkEyXkFqcGc@._V1_SX300.jpg"
+  },
+  {
+    "Id": "tt6320628",
+    "Title": "Spider-Man: Far from Home",
+    "Year": "2019",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BMzNhNTE0NWQtN2E1Ny00NjcwLTg1YTctMGY1NmMwODJmY2NmXkEyXkFqcGc@._V1_QL75_UX380_CR0,1,380,562_.jpg"
+  },
+  {
+    "Id": "tt1872181",
+    "Title": "The Amazing Spider-Man 2",
+    "Year": "2014",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BOTA5NDYxNTg0OV5BMl5BanBnXkFtZTgwODE5NzU1MTE@._V1_QL75_UX380_CR0,0,380,562_.jpg"
+  }
+]
