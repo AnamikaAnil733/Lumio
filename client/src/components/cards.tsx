@@ -1,5 +1,5 @@
 import { FaFilm, FaHeart, FaRegHeart, FaSpinner } from 'react-icons/fa';
-import { useMovieContext } from '../context/movieContext';
+import { useMovieContext } from '../context/useMovieContext';
 import type { Movie } from '../Type/movieType';
 
 function MovieCard({ movie, isFav }: { movie: Movie; isFav: boolean }) {
@@ -8,7 +8,7 @@ function MovieCard({ movie, isFav }: { movie: Movie; isFav: boolean }) {
   return (
     <div className="group bg-[#121212] border border-gray-800/80 rounded-2xl overflow-hidden hover:border-[#D4AF37]/50 hover:shadow-lg hover:shadow-amber-950/5 hover:-translate-y-1 transition-all duration-300 flex flex-col relative">
       {/* Poster */}
-      <div className="aspect-[2/3] w-full bg-[#1E1E1E] overflow-hidden relative">
+      <div className="aspect-2/3 w-full bg-[#1E1E1E] overflow-hidden relative">
         {movie.Poster && movie.Poster !== 'N/A' ? (
           <img
             src={movie.Poster}
@@ -52,7 +52,7 @@ export function Cards() {
   if (activeTab === 'favorites') {
     return (
       <div className="flex flex-col gap-6">
-        <h2 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-gray-100 to-gray-400">
+        <h2 className="text-xl font-bold text-transparent bg-clip-text bg-linear-to-r from-gray-100 to-gray-400">
           Saved Favorites
         </h2>
 

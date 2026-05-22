@@ -3,7 +3,7 @@ import { Navbar } from './components/navbar';
 import { Search } from './components/serachBar';
 import { Cards } from './components/cards';
 import { Pagination } from './components/pagination';
-import { useMovieContext } from './context/movieContext';
+import { useMovieContext } from './context/useMovieContext';
 
 function App() {
   const { activeTab } = useMovieContext();

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { FaSearch } from 'react-icons/fa';
-import { useMovieContext } from '../context/movieContext';
+import { useMovieContext } from '../context/useMovieContext';
 
 export function Search() {
   const [query, setQuery] = useState('');

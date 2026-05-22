@@ -1,25 +1,9 @@
-import { createContext, useContext, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import type { Movie } from "../Type/movieType";
 import { searchMovies, getFavorites, addFavorite, removeFavorite } from "../services/movieApi";
+import { MovieContext } from "./movieContextDef";
 
-type MovieContextType = {
-  activeTab: "search" | "favorites";
-  setActiveTab: React.Dispatch<React.SetStateAction<"search" | "favorites">>;
-  searchQuery: string;
-  setSearchQuery: React.Dispatch<React.SetStateAction<string>>;
-  page: number;
-  setPage: React.Dispatch<React.SetStateAction<number>>;
-  movies: Movie[];
-  favorites: Movie[];
-  loading: boolean;
-  totalResults: number;
-  error: string | null;
-  toggleFavorite: (movie: Movie) => Promise<void>;
-};
-
-export const MovieContext = createContext<MovieContextType | null>(null);
-
-export const MovieProvider = ({ children }: { children: React.ReactNode }) => {
+export function MovieProvider({ children }: { children: React.ReactNode }) {
   const [activeTab, setActiveTab] = useState<"search" | "favorites">("search");
   const [searchQuery, setSearchQuery] = useState("");
   const [page, setPage] = useState(1);
@@ -103,12 +87,4 @@ export const MovieProvider = ({ children }: { children: React.ReactNode }) => {
       {children}
     </MovieContext.Provider>
   );
-};
-
-export const useMovieContext = () => {
-  const context = useContext(MovieContext);
-  if (!context) {
-    throw new Error("useMovieContext must be used inside a MovieProvider");
-  }
-  return context;
-};
+}

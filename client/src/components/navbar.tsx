@@ -1,5 +1,5 @@
 import { FaFilm } from 'react-icons/fa';
-import { useMovieContext } from '../context/movieContext';
+import { useMovieContext } from '../context/useMovieContext';
 
 export function Navbar() {
   const { activeTab, setActiveTab, favorites } = useMovieContext();

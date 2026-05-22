@@ -1,5 +1,5 @@
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
-import { useMovieContext } from '../context/movieContext';
+import { useMovieContext } from '../context/useMovieContext';
 
 export function Pagination() {
   const { page, setPage, totalResults, loading, movies, activeTab } = useMovieContext();
