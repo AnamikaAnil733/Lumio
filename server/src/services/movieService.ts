@@ -1,38 +1,27 @@
-import axios from "axios";
 import { Movie } from "../interfaces/movieInterface.js";
-import * as favoriteRepo from "../repositories/favoriteRepository.js";
+import { IMovieRepository } from "../interfaces/IMovieRepository.js";
+import { IFavoriteRepository } from "../interfaces/IFavoriteRepository.js";
+import { IMovieService } from "../interfaces/IMovieService.js";
 
-export const searchMovies = async(query:string,page:string = "1")=>{
-    const API_KEY = process.env.OMDB_API_KEY;
-    const response = await axios.get(
-        `https://www.omdbapi.com/?apikey=${API_KEY}&s=${query}&page=${page}`
-      );
-    
-      if (response.data && response.data.Response === "True" && Array.isArray(response.data.Search)) {
-        const mappedSearch = response.data.Search.map((m: any) => ({
-          Id: m.imdbID,
-          Title: m.Title,
-          Year: m.Year,
-          Poster: m.Poster,
-        }));
-        return {
-          ...response.data,
-          Search: mappedSearch,
-        };
-      }
+export class MovieService implements IMovieService {
+    constructor(
+        private movieRepository: IMovieRepository,
+        private favoriteRepository: IFavoriteRepository
+    ) {}
 
-      return response.data;
-}
+    async searchMovies(query: string, page: string = "1") {
+        return this.movieRepository.searchMovies(query, page);
+    }
 
+    async getFavorites() {
+        return this.favoriteRepository.getFavorites();
+    }
 
-export const getFavorites = async ()=>{
-    return await favoriteRepo.getFavorites();
-}
+    async removeFavorites(id: string) {
+        return this.favoriteRepository.removeFavorite(id);
+    }
 
-export const removeFavorites = async (Id:string)=>{
-   return await favoriteRepo.removeFavorites(Id);
-}
-
-export const addFavorites = async (movie:Movie)=>{
-    return await favoriteRepo.addFavorites(movie);
+    async addFavorites(movie: Movie) {
+        return this.favoriteRepository.addFavorite(movie);
+    }
 }
