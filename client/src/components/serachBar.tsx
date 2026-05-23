@@ -10,14 +10,10 @@ export function Search() {
   const debouncedQuery = useDebounce(query, 500);
 
   useEffect(() => {
-
-    setSearchQuery(
-      debouncedQuery.trim()
-    );
-
+    if (!debouncedQuery.trim()) return;
+    setSearchQuery(debouncedQuery.trim());
     setPage(1);
-
-  }, [debouncedQuery,setPage,setSearchQuery]);
+  }, [debouncedQuery, setPage, setSearchQuery]);
 
   return (
    
