@@ -8,7 +8,7 @@ export function Navbar() {
     <header className="sticky top-0 z-50 bg-[#121212]/80 backdrop-blur-md border-b border-gray-800 px-6 py-4 flex items-center justify-between">
       <div className="flex items-center gap-3">
         <FaFilm className="text-[#D4AF37] text-3xl" />
-        <h1 className="text-2xl font-bold tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] to-amber-400">
+        <h1 className="text-2xl font-bold tracking-wider text-transparent bg-clip-text bg-linear-to-r from-[#D4AF37] to-amber-400">
           LUMIO
         </h1>
       </div>

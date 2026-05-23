@@ -46,5 +46,17 @@
     "Title": "The Amazing Spider-Man 2",
     "Year": "2014",
     "Poster": "https://m.media-amazon.com/images/M/MV5BOTA5NDYxNTg0OV5BMl5BanBnXkFtZTgwODE5NzU1MTE@._V1_QL75_UX380_CR0,0,380,562_.jpg"
+  },
+  {
+    "Id": "tt6718170",
+    "Title": "The Super Mario Bros. Movie",
+    "Year": "2023",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BOGZlN2EzOTYtMzUzOS00NTM3LTg0MTQtZDVjZGM4YmJlNWNhXkEyXkFqcGc@._V1_QL75_UY562_CR0,0,380,562_.jpg"
+  },
+  {
+    "Id": "tt0247745",
+    "Title": "Super Troopers",
+    "Year": "2001",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BM2ViMTkwNzItMzRiYy00MmFmLThkNzQtZTMwYWNiYzk0MzIwXkEyXkFqcGc@._V1_SX300.jpg"
   }
 ]
