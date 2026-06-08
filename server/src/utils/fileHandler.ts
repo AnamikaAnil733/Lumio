@@ -9,7 +9,6 @@ const __dirname = path.dirname(__filename);
 const dataDir = path.join(__dirname, "../data");
 const filePath = path.join(dataDir, "favorites.json");
 
-// Storage shape: Record<sessionId, Movie[]>
 type FavoritesStore = Record<string, Movie[]>;
 
 const ensureFileExists = async () => {
@@ -18,7 +17,6 @@ const ensureFileExists = async () => {
         try {
             await fs.access(filePath);
         } catch {
-            // Initialize with empty object, not array
             await fs.writeFile(filePath, JSON.stringify({}, null, 2), "utf-8");
         }
     } catch (err) {
@@ -30,7 +28,6 @@ const readStore = async (): Promise<FavoritesStore> => {
     await ensureFileExists();
     const raw = await fs.readFile(filePath, "utf-8");
     const parsed = JSON.parse(raw);
-    // Migrate old flat-array format to new keyed format
     if (Array.isArray(parsed)) {
         return {};
     }
