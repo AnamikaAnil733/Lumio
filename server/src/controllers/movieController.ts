@@ -23,7 +23,11 @@ export class MovieController {
 
     getFavorites = async (req: Request, res: Response, next: NextFunction) => {
         try {
-            const favorites = await this.movieService.getFavorites();
+            const sessionId = req.headers["x-session-id"] as string;
+            if (!sessionId) {
+                return res.status(400).json({ message: "X-Session-Id header is required" });
+            }
+            const favorites = await this.movieService.getFavorites(sessionId);
             return res.status(200).json(favorites);
         } catch (error) {
             next(error);
@@ -32,8 +36,12 @@ export class MovieController {
 
     addFavorites = async (req: Request, res: Response, next: NextFunction) => {
         try {
+            const sessionId = req.headers["x-session-id"] as string;
+            if (!sessionId) {
+                return res.status(400).json({ message: "X-Session-Id header is required" });
+            }
             const movie = req.body;
-            const favorites = await this.movieService.addFavorites(movie);
+            const favorites = await this.movieService.addFavorites(movie, sessionId);
             return res.status(200).json(favorites);
         } catch (error) {
             next(error);
@@ -42,8 +50,12 @@ export class MovieController {
 
     removeFavorites = async (req: Request, res: Response, next: NextFunction) => {
         try {
+            const sessionId = req.headers["x-session-id"] as string;
+            if (!sessionId) {
+                return res.status(400).json({ message: "X-Session-Id header is required" });
+            }
             const id = req.params.id as string;
-            const favorites = await this.movieService.removeFavorites(id);
+            const favorites = await this.movieService.removeFavorites(id, sessionId);
             return res.status(200).json(favorites);
         } catch (error) {
             next(error);

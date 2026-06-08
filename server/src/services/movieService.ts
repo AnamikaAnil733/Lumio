@@ -13,15 +13,15 @@ export class MovieService implements IMovieService {
         return this.movieRepository.searchMovies(query, page);
     }
 
-    async getFavorites() {
-        return this.favoriteRepository.getFavorites();
+    async getFavorites(sessionId: string) {
+        return this.favoriteRepository.getFavorites(sessionId);
     }
 
-    async removeFavorites(id: string) {
-        return this.favoriteRepository.removeFavorite(id);
+    async removeFavorites(id: string, sessionId: string) {
+        return this.favoriteRepository.removeFavorite(id, sessionId);
     }
 
-    async addFavorites(movie: Movie) {
-        return this.favoriteRepository.addFavorite(movie);
+    async addFavorites(movie: Movie, sessionId: string) {
+        return this.favoriteRepository.addFavorite(movie, sessionId);
     }
 }
