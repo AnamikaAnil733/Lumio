@@ -1,20 +1,25 @@
+import { useState } from 'react';
 import { FaFilm, FaHeart, FaRegHeart, FaSpinner } from 'react-icons/fa';
 import { useMovieContext } from '../context/useMovieContext';
 import type { Movie } from '../Type/movieType';
 
 function MovieCard({ movie, isFav }: { movie: Movie; isFav: boolean }) {
   const { toggleFavorite } = useMovieContext();
+  const [imgError, setImgError] = useState(false);
+
+  const hasPoster = movie.Poster && movie.Poster !== 'N/A' && !imgError;
 
   return (
     <div className="group bg-[#121212] border border-gray-800/80 rounded-2xl overflow-hidden hover:border-[#D4AF37]/50 hover:shadow-lg hover:shadow-amber-950/5 hover:-translate-y-1 transition-all duration-300 flex flex-col relative">
       {/* Poster */}
       <div className="aspect-2/3 w-full bg-[#1E1E1E] overflow-hidden relative">
-        {movie.Poster && movie.Poster !== 'N/A' ? (
+        {hasPoster ? (
           <img
             src={movie.Poster}
             alt={movie.Title}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
             loading="lazy"
+            onError={() => setImgError(true)}
           />
         ) : (
           <div className="w-full h-full flex flex-col items-center justify-center text-gray-600 gap-2">

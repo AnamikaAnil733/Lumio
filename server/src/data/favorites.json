@@ -12,42 +12,6 @@
     "Poster": "https://m.media-amazon.com/images/M/MV5BNGQ0YTQyYTgtNWI2YS00NTE2LWJmNDItNTFlMTUwNmFlZTM0XkEyXkFqcGc@._V1_SX300.jpg"
   },
   {
-    "Id": "tt4633694",
-    "Title": "Spider-Man: Into the Spider-Verse",
-    "Year": "2018",
-    "Poster": "https://m.media-amazon.com/images/M/MV5BMjMwNDkxMTgzOF5BMl5BanBnXkFtZTgwNTkwNTQ3NjM@._V1_SX300.jpg"
-  },
-  {
-    "Id": "tt32064037",
-    "Title": "To Avenge My Ex, I Married a Stranger",
-    "Year": "2023",
-    "Poster": "https://m.media-amazon.com/images/M/MV5BOTllYzE5NDAtMTNiMC00Y2U2LTg1YWYtMjUwOGJlNGM3YzE0XkEyXkFqcGc@._V1_SX300.jpg"
-  },
-  {
-    "Id": "tt36152613",
-    "Title": "The Bat-Man II",
-    "Year": "2025",
-    "Poster": "https://m.media-amazon.com/images/M/MV5BNTViM2RlY2QtNjhjNC00NTZiLWIzNGMtMzdhZTA3ZWFmNjQ5XkEyXkFqcGc@._V1_SX300.jpg"
-  },
-  {
-    "Id": "tt34788501",
-    "Title": "The Bat-Man",
-    "Year": "2025",
-    "Poster": "https://m.media-amazon.com/images/M/MV5BNzRmOWZkZGQtOTY0OS00YmFmLTgwYjctOWZhZjIxNjYyYjZjXkEyXkFqcGc@._V1_SX300.jpg"
-  },
-  {
-    "Id": "tt6320628",
-    "Title": "Spider-Man: Far from Home",
-    "Year": "2019",
-    "Poster": "https://m.media-amazon.com/images/M/MV5BMzNhNTE0NWQtN2E1Ny00NjcwLTg1YTctMGY1NmMwODJmY2NmXkEyXkFqcGc@._V1_QL75_UX380_CR0,1,380,562_.jpg"
-  },
-  {
-    "Id": "tt1872181",
-    "Title": "The Amazing Spider-Man 2",
-    "Year": "2014",
-    "Poster": "https://m.media-amazon.com/images/M/MV5BOTA5NDYxNTg0OV5BMl5BanBnXkFtZTgwODE5NzU1MTE@._V1_QL75_UX380_CR0,0,380,562_.jpg"
-  },
-  {
     "Id": "tt6718170",
     "Title": "The Super Mario Bros. Movie",
     "Year": "2023",
@@ -58,5 +22,23 @@
     "Title": "Super Troopers",
     "Year": "2001",
     "Poster": "https://m.media-amazon.com/images/M/MV5BM2ViMTkwNzItMzRiYy00MmFmLThkNzQtZTMwYWNiYzk0MzIwXkEyXkFqcGc@._V1_SX300.jpg"
+  },
+  {
+    "Id": "tt32612507",
+    "Title": "Lee Cronin's The Mummy",
+    "Year": "2026",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BNWQ1NzI2YTUtN2E0ZS00YzVmLTkxNjktMWIzNTYwMzkyOTU0XkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg"
+  },
+  {
+    "Id": "tt1646971",
+    "Title": "How to Train Your Dragon 2",
+    "Year": "2014",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BMzMwMTAwODczN15BMl5BanBnXkFtZTgwMDk2NDA4MTE@._V1_SX300.jpg"
+  },
+  {
+    "Id": "tt5109280",
+    "Title": "Raya and the Last Dragon",
+    "Year": "2021",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BN2QzZTQ3MzktN2JiYS00MDEzLTgxMWQtZWFmMDI3NWFkZTY0XkEyXkFqcGc@._V1_SX300.jpg"
   }
 ]
