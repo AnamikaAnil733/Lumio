@@ -2,11 +2,11 @@ import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { useMovieContext } from '../context/useMovieContext';
 
 export function Pagination() {
-  const { page, setPage, totalResults, loading, movies, activeTab } = useMovieContext();
+  const { page, setPage, totalResults, loading, movies, activeTab, searchQuery } = useMovieContext();
 
   const totalPages = Math.ceil(totalResults / 10);
 
-  if (activeTab !== 'search' || loading || movies.length === 0 || totalPages <= 1) {
+  if (activeTab !== 'search' || loading || movies.length === 0 || totalPages <= 1 || !searchQuery) {
     return null;
   }
 
