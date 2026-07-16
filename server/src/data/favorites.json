@@ -45,22 +45,46 @@
       "Poster": "https://m.media-amazon.com/images/M/MV5BNGQ0YTQyYTgtNWI2YS00NTE2LWJmNDItNTFlMTUwNmFlZTM0XkEyXkFqcGc@._V1_SX300.jpg"
     },
     {
-      "Id": "tt4633694",
-      "Title": "Spider-Man: Into the Spider-Verse",
-      "Year": "2018",
-      "Poster": "https://m.media-amazon.com/images/M/MV5BMjMwNDkxMTgzOF5BMl5BanBnXkFtZTgwNTkwNTQ3NjM@._V1_SX300.jpg"
+      "Id": "tt10872600",
+      "Title": "Spider-Man: No Way Home",
+      "Year": "2021",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMmFiZGZjMmEtMTA0Ni00MzA2LTljMTYtZGI2MGJmZWYzZTQ2XkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg"
+    }
+  ],
+  "104af1d9-dd68-4642-8c20-2745aef73cac": [
+    {
+      "Id": "tt6105098",
+      "Title": "The Lion King",
+      "Year": "2019",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMjIwMjE1Nzc4NV5BMl5BanBnXkFtZTgwNDg4OTA1NzM@._V1_SX300.jpg"
     },
+    {
+      "Id": "tt13186482",
+      "Title": "Mufasa: The Lion King",
+      "Year": "2024",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BYjBkOWUwODYtYWI3YS00N2I0LWEyYTktOTJjM2YzOTc3ZDNlXkEyXkFqcGc@._V1_SX300.jpg"
+    }
+  ],
+  "12d8534d-7df5-41da-8988-ca13a55a1786": [
+    {
+      "Id": "tt27902121",
+      "Title": "Super/Man: The Christopher Reeve Story",
+      "Year": "2024",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BNzhhMjRkMmEtMGJiMi00NGEzLWExYzItNzliYmM2YmI0MjVkXkEyXkFqcGc@._V1_SX300.jpg"
+    },
+    {
+      "Id": "tt24580490",
+      "Title": "Super Junior: The Last Man Standing",
+      "Year": "2023",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BZmY2Yzg4NmEtZWEzMS00OTAzLWI3MGEtYzMzNGRiODk4MGFlXkEyXkFqcGc@._V1_SX300.jpg"
+    }
+  ],
+  "ba053ded-4b82-4ed9-a5ae-7a5f9d9ddf74": [
     {
       "Id": "tt10872600",
       "Title": "Spider-Man: No Way Home",
       "Year": "2021",
       "Poster": "https://m.media-amazon.com/images/M/MV5BMmFiZGZjMmEtMTA0Ni00MzA2LTljMTYtZGI2MGJmZWYzZTQ2XkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg"
-    },
-    {
-      "Id": "tt0093176",
-      "Title": "Hello Mary Lou: Prom Night II",
-      "Year": "1987",
-      "Poster": "https://m.media-amazon.com/images/M/MV5BMWQxZjMwODMtYzRlOS00YjAyLWI2ZjYtZmZiNzE5NTEwOWFlXkEyXkFqcGc@._V1_SX300.jpg"
     }
   ]
 }

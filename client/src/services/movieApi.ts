@@ -17,22 +17,22 @@ export const searchMovies = async (query: string, page: number) => {
     const response = await API.get(route.SEARCHMOVIES, {
         params: { q: query, page }
     });
-    return response.data;
+    return response.data.data;
 };
 
 export const getFavorites = async (): Promise<Movie[]> => {
     const response = await API.get(route.FAVORITIES);
-    return response.data;
+    return response.data.data;
 };
 
 export const removeFavorite = async (id: string): Promise<Movie[]> => {
     const response = await API.delete(`${route.FAVORITIES}/${id}`)
-    return response.data;
+    return response.data.data;
 };
 
 export const addFavorite = async (movie: Movie): Promise<Movie[]> => {
     const response = await API.post(route.FAVORITIES, movie);
-    return response.data;
+    return response.data.data;
 };
 
 export default API;

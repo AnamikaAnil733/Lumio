@@ -3,6 +3,8 @@ import {
     Response,
     NextFunction
   } from "express";
+import { ResponseHandler } from "../helper/responseHelper.js";
+import { CustomError } from "../utils/customError.js";
   
   export const errorHandler = (
     error: Error,
@@ -11,10 +13,11 @@ import {
     next: NextFunction
   ) => {
   
-    console.log(error);
+    console.error(error);
   
-    res.status(500).json({
-      success: false,
-      message: error.message || "Server Error",
-    });
+    const statusCode = error instanceof CustomError ? error.statusCode : 500;
+    const message = error.message || "Server Error";
+    const details = error instanceof CustomError ? error.details : undefined;
+
+    return ResponseHandler.error(res, message, statusCode, details);
   };
