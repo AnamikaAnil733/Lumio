@@ -5,6 +5,7 @@ import { CustomError } from "../utils/customError.js";
 import { MESSAGES } from "../constants/messages/messages.js";
 import { CustomRequest } from "../interfaces/ICustomRequest.js";
 import {ResponseHandler} from "../helper/responseHelper.js"
+import { logger } from "../helper/logger.js";
 
 export class MovieController {
     constructor(private _movieService: IMovieService) {}
@@ -19,11 +20,13 @@ export class MovieController {
                 );
             }
             const movies = await this._movieService.searchMovies(query, page);
+          logger.info(movies)
         return ResponseHandler.success(res,MESSAGES.SEARCH_MOVIES,movies,HttpStatusCode.OK)
     };
 
     getFavorites = async (req: CustomRequest, res: Response) => {
             const favorites = await this._movieService.getFavorites(req.sessionId!);
+            logger.info(favorites)
         return ResponseHandler.success(res,MESSAGES.GET_FAVORITES,favorites,HttpStatusCode.OK)
     };
 

@@ -1,4 +1,4 @@
-import { Movie } from "./movieInterface.js";
+import { Movie } from "./IMovieInterface.js";
 
 export interface IMovieService {
     searchMovies(query: string, page?: string): Promise<any>;

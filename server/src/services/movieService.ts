@@ -1,4 +1,4 @@
-import { Movie } from "../interfaces/movieInterface.js";
+import { Movie } from "../interfaces/IMovieInterface.js";
 import { IMovieRepository } from "../interfaces/IMovieRepository.js";
 import { IFavoriteRepository } from "../interfaces/IFavoriteRepository.js";
 import { IMovieService } from "../interfaces/IMovieService.js";

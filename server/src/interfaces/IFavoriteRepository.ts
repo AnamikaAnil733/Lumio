@@ -1,4 +1,4 @@
-import { Movie } from "./movieInterface.js";
+import { Movie } from "./IMovieInterface.js";
 
 export interface IFavoriteRepository {
     getFavorites(sessionId: string): Promise<Movie[]>;

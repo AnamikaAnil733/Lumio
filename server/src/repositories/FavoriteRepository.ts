@@ -1,4 +1,4 @@
-import { Movie } from "../interfaces/movieInterface.js";
+import { Movie } from "../interfaces/IMovieInterface.js";
 import { IFavoriteRepository } from "../interfaces/IFavoriteRepository.js";
 import { readFavorites, writeFavorites } from "../utils/fileHandler.js";
 
