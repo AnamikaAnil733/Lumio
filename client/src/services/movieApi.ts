@@ -7,32 +7,49 @@ const API = axios.create({
     baseURL: import.meta.env.VITE_BASE_URL,
     headers: {
         "Content-Type": "application/json",
-        "X-Session-Id": getSessionId(),
     }
 });
 
 
+API.interceptors.request.use(
+    (config) => {
+        config.headers["X-Session-Id"] = getSessionId();
+        return config;
+    },
+    (error) => {
+        return Promise.reject(error);
+    }
+);
 
-export const searchMovies = async (query: string, page: number) => {
-    const response = await API.get(route.SEARCHMOVIES, {
+
+API.interceptors.response.use(
+    (response) => {
+        return response.data.data;
+    },
+    (error) => {
+        console.error("API call failed:", error.response?.data || error.message);
+        return Promise.reject(error);
+    }
+);
+
+
+
+export const searchMovies = async (query: string, page: number): Promise<any> => {
+    return API.get<any, any>(route.SEARCHMOVIES, {
         params: { q: query, page }
     });
-    return response.data.data;
 };
 
 export const getFavorites = async (): Promise<Movie[]> => {
-    const response = await API.get(route.FAVORITIES);
-    return response.data.data;
+    return API.get<any, Movie[]>(route.FAVORITIES);
 };
 
 export const removeFavorite = async (id: string): Promise<Movie[]> => {
-    const response = await API.delete(`${route.FAVORITIES}/${id}`)
-    return response.data.data;
+    return API.delete<any, Movie[]>(`${route.FAVORITIES}/${id}`);
 };
 
 export const addFavorite = async (movie: Movie): Promise<Movie[]> => {
-    const response = await API.post(route.FAVORITIES, movie);
-    return response.data.data;
+    return API.post<any, Movie[]>(route.FAVORITIES, movie);
 };
 
 export default API;
