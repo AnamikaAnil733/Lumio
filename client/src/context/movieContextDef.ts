@@ -5,7 +5,7 @@ export type MovieContextType = {
   activeTab: "search" | "favorites";
   setActiveTab: React.Dispatch<React.SetStateAction<"search" | "favorites">>;
   searchQuery: string;
-  setSearchQuery: React.Dispatch<React.SetStateAction<string>>;
+  setSearchQuery: (query: string) => void;
   page: number;
   setPage: React.Dispatch<React.SetStateAction<number>>;
   movies: Movie[];

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import type { Movie } from "../Type/movieType";
 import { searchMovies, getFavorites, addFavorite, removeFavorite } from "../services/movieApi";
 import { MovieContext } from "./movieContextDef";
@@ -14,15 +14,24 @@ export function MovieProvider({ children }: { children: React.ReactNode }) {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    const fetchFavorites = async () => {
+    const initData = async () => {
+      setLoading(true);
       try {
         const favs = await getFavorites();
         setFavorites(favs);
+
+        const data = await searchMovies("avengers", 1);
+        if (data.Response === "True") {
+          setMovies(data.Search || []);
+          setTotalResults(parseInt(data.totalResults) || 0);
+        }
       } catch (err) {
-        console.error("Failed to load favorites:", err);
+        console.error("Initialization error:", err);
+      } finally {
+        setLoading(false);
       }
     };
-    fetchFavorites();
+    initData();
   }, []);
 
   useEffect(() => {
@@ -67,13 +76,22 @@ export function MovieProvider({ children }: { children: React.ReactNode }) {
     }
   };
 
+  const updateSearchQuery = useCallback((query: string) => {
+    setSearchQuery(query);
+    if (!query) {
+      setMovies([]);
+      setTotalResults(0);
+      setError(null);
+    }
+  }, []);
+
   return (
     <MovieContext.Provider
       value={{
         activeTab,
         setActiveTab,
         searchQuery,
-        setSearchQuery,
+        setSearchQuery: updateSearchQuery,
         page,
         setPage,
         movies,

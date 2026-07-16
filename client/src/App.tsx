@@ -1,4 +1,3 @@
-import './App.css';
 import { Navbar } from './components/navbar';
 import { Search } from './components/serachBar';
 import { Cards } from './components/cards';
